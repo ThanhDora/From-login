@@ -14,4 +14,7 @@ app.use(
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  // eslint-disable-next-line no-console -- server startup message
+  console.log(`Server running on port http://localhost:${PORT}`);
+});
